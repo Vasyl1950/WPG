@@ -1,0 +1,83 @@
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+@import "base/base";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/contacts";
+
+
+
+   #carousel{
+     margin: 0 20px;
+   }
+   
+   .carousel-inner img {
+     width: 100%;
+     height: 100%;
+   }
+   #pasek, #pasek1,
+   #pasek2,#pasek11{
+     left: 0px;
+     width: 100%;
+     height: 46px;
+     background: url(../img/pasek2.jpg) repeat-x;
+   }
+   #pasek52,
+   #pasek50,
+   #pasek51,
+   #pasek53 {
+     left: 0px;
+     width: 100%;
+     height: 46px;
+     background: url(../img/pasek51.jpg) repeat-x;
+   }
+   /*--гАЛЕРЕЯ--*/
+   .thumb img {
+     -webkit-filter: grayscale(0);
+     filter: none;
+     border-radius: 5px;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     padding: 5px;
+   }
+   
+   .thumb img:hover {
+     -webkit-filter: grayscale(1);
+     filter: grayscale(1);
+   }
+   
+   .thumb {
+     padding: 5px;
+   }
+   /*--гАЛЕРЕЯ END--*/
+   #map{
+     margin-left: auto;
+       margin-right: auto;
+       width: 7em
+   }
+   
+    #harazd {
+    margin-top: 20px;
+   }
+   #hara{
+     color: rgb(235, 18, 18);
+     background-color:#6a535d !important;
+    
+     text-align: center; 
+     border-color: #00ff1f;
+     border-radius: 30px;
+   }
+   .shadow-lg {
+     box-shadow: 0 1rem 3rem rgba(200, 224, 92, 0.897);
+   }
+   .embed-responsive {
+     position: relative;
+     top: 0;
+     bottom: 0;
+     margin: 0 auto;
+    
+   }
+  
