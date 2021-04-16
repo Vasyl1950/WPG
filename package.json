@@ -2,7 +2,7 @@
   "name": "static-wpg",
   "version": "2.0.1",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/Vasyl1950/WPG",
   "description": "HTML template",
   "main": "src/index.js",
   "scripts": {
