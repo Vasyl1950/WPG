@@ -57,13 +57,13 @@ Html Webpack Plugin:
        <div class="carousel-item  active" data-interval="2000"> 
          <img class="img-fluid shadow-lg p-3 mb-5 bg-dark rounded d-block w-100" src="img/harazd11.jpg  " alt="..."> 
             <div class="carousel-caption line-height:initial d-md-block"> 
-              <h2><span class="text">Ресторан ~ГаразД~</span></h2>  
+              <h1>Ресторан ~ГаразД~</h1> 
             </div> 
        </div> 
        <div class="carousel-item" data-interval="2000"> 
          <img class="img-fluid shadow-lg p-3 mb-5 bg-secondary rounded d-block w-100" src="img/photo31  .JPG" alt="..."> 
          <div class="carousel-caption d-md-block"> 
-         <h2><span class="text">Ласкаво Просимо!</span></h2>  
+           <h1>Ласкаво Просимо!</h1> 
          </div> 
        </div> 
      </div> 
@@ -121,15 +121,6 @@ Html Webpack Plugin:
         </span> 
         </div> 
     </footer> 
-    <script> 
-    var text = $('.text').text(), 
-      textArr = text.split(''); 
-  $('.text').html(''); 
-  $.each(textArr, function(i, v){ 
-    if(v == ' '){$('.text').append('<span class="space"></span>');} 
-    $('.text').append('<span>'+v+'</span>'); 
-  }) 
-  </script>  
     <script src="js/bundle.js"></script> 
     </body> 
   </html>
