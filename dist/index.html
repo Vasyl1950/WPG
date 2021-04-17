@@ -55,22 +55,22 @@ Html Webpack Plugin:
    <div id="carousel-1" class="carousel slide carousel-fade" data-ride="carousel"> 
      <div class="carousel-inner"> 
        <div class="carousel-item  active" data-interval="2000"> 
-         <img class="img-fluid shadow-lg p-3 mb-5 bg-dark rounded d-block w-100" src="img/harazd11.jpg" alt="..."> 
+         <img class="img-fluid shadow-lg p-3 mb-5 bg-dark rounded d-block w-100" src="img/harazd11.jpg  " alt="..."> 
             <div class="carousel-caption line-height:initial d-md-block"> 
-              <h1>Ресторан ~ГаразД~</h1> 
+              <h2><span class="text">Ресторан ~ГаразД~</span></h2>  
             </div> 
        </div> 
        <div class="carousel-item" data-interval="2000"> 
-         <img class="img-fluid shadow-lg p-3 mb-5 bg-secondary rounded d-block w-100" src="img/photo31.JPG" alt="..."> 
+         <img class="img-fluid shadow-lg p-3 mb-5 bg-secondary rounded d-block w-100" src="img/photo31  .JPG" alt="..."> 
          <div class="carousel-caption d-md-block"> 
-           <h1>Ласкаво Просимо!</h1> 
+         <h2><span class="text">Ласкаво Просимо!</span></h2>  
          </div> 
        </div> 
      </div> 
    </div> 
    <div id="pasek11"></div> 
    <div id="hara" class="jumbotron text-center" style="margin-bottom:0"> 
-     <h2 style="color:rgba(26 209 228)"> В Ресторації ~ГаразД~ Ви можете відсвяткувати різні події Вашого життя – дні народження, 
+     <h2 style="color:rgba(26 209 228)"> В Ресторації ~ГаразД~ Ви можете відсвяткувати різні події Ваш  ого життя – дні народження, 
         ювілеї, хрестини, річниці, іменини, дитячі святкування, корпоративи,  
         тематичні свята та інші. 
         До Ваших послуг зали різного формату.</h2> 
@@ -90,7 +90,7 @@ Html Webpack Plugin:
           <div class="col-sm-3"> 
                     <span class="text-white">Email:</span> 
                      <br /> 
-                    <a href="mailto:harazduk@gmail.com" style="font-size:18px;color:#ff9800" title="Email">harazduk@gmail.com</a>       
+                    <a href="mailto:harazduk@gmail.com" style="font-size:18px;color:#ff9800" title="Em  ail">harazduk@gmail.com</a>     
           </div> 
           <div class="col-sm-3"> 
             <span class="text-white">Address:</span> 
@@ -121,6 +121,15 @@ Html Webpack Plugin:
         </span> 
         </div> 
     </footer> 
+    <script> 
+    var text = $('.text').text(), 
+      textArr = text.split(''); 
+  $('.text').html(''); 
+  $.each(textArr, function(i, v){ 
+    if(v == ' '){$('.text').append('<span class="space"></span>');} 
+    $('.text').append('<span>'+v+'</span>'); 
+  }) 
+  </script>  
     <script src="js/bundle.js"></script> 
     </body> 
   </html>
