@@ -48,7 +48,7 @@
       </div>
   
   </footer>
-  
+  <script src="js/bundle.js"></script>
   <script>
   var text = $('.text').text(),
     textArr = text.split('');
@@ -59,8 +59,6 @@ $.each(textArr, function(i, v){
   if(v == ' '){$('.text').append('<span class="space"></span>');}
   $('.text').append('<span>'+v+'</span>');
 })
-</script> 
-
-  <script src="js/bundle.js"></script>
+</script>
   </body>
 </html>
