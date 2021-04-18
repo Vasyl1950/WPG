@@ -9,6 +9,26 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica 
 @import "pages/contacts";
 
 
+
+.wrapper {
+  position:relative;
+  top: 50%;
+  width: 90%;
+  left: 5%;
+  font-size: 30px;
+  height: 175px;
+}
+
+.wave {
+  color: #999999;
+  animation: 0.5s color infinite;
+}
+
+@keyframes color {
+  50% {
+    color: #e4c412;
+  }
+}
    .carousel-inner img {
      width: 100%;
      height: 100%;
