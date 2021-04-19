@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.location.pathname) {
     const activeCssClass = 'header__item--active';
    
-    const currentAnchor = document.querySelector(`a[href$='${path}']`);
-    currentAnchor.classList.add(activeCssClass);
+   
   }
 });
