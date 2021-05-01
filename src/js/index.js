@@ -43,8 +43,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   if (window.location.pathname) {
     const activeCssClass = 'header__item--active';
-   
-   
-   
   }
 });
