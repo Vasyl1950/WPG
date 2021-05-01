@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 
 
@@ -24,17 +23,11 @@ function generateHtmlPlugins(templateDir) {
 }
 
 const htmlPlugins = generateHtmlPlugins("./src/html/views");
-const entries = fs.readdirSync(path.resolve(__dirname, "./src/js"));
-console.log('entries', entries);
 
-_entries = entries.map(item => `./src/js/${item}`);
 const config = {
-  entry: [..._entries,
-     "./src/scss/style.scss"],
+  entry: ["./src/js/index.js", "./src/scss/style.scss"],
   output: {
-    filename: "./js/bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    
+    filename: "./js/bundle.js"
   },
   devtool: "source-map",
   mode: "production",
@@ -64,7 +57,7 @@ const config = {
               url: false
             }
           },
-        
+         
           {
             loader: "sass-loader",
             options: {
@@ -81,6 +74,7 @@ const config = {
     ],
   },
   plugins: [
+   
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css"
     }),
