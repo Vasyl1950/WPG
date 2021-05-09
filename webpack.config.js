@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -24,10 +24,16 @@ function generateHtmlPlugins(templateDir) {
 }
 
 const htmlPlugins = generateHtmlPlugins("./src/html/views");
+const entries = fs.readdirSync(path.resolve(__dirname, "./src/js"));
+console.log('entries', entries);
+
+_entries = entries.map(item => `./src/js/${item}`);
 
 const config = {
-  entry: ["./src/js/index.js", "./src/scss/style.scss"],
+  entry: [..._entries,
+    "./src/scss/style.scss"],
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: "./js/bundle.js"
   },
   devtool: "source-map",
@@ -58,7 +64,25 @@ const config = {
               url: false
             }
           },
-         
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              sourceMap: true,
+              plugins: () => [
+                require("cssnano")({
+                  preset: [
+                    "default",
+                    {
+                      discardComments: {
+                        removeAll: true
+                      }
+                    }
+                  ]
+                })
+              ]
+            }
+          },
           {
             loader: "sass-loader",
             options: {
