@@ -12,12 +12,9 @@
     "start": "webpack-dev-server --mode development --open"
   },
   "dependencies": {
-   
     "bootstrap": "^4.6.0"
-    
   },
   "devDependencies": {
-   
     "clean": "^4.0.2",
     "clean-webpack-plugin": "^2.0.2",
     "copy-webpack-plugin": "^5.1.1",

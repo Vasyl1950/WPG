@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -16,6 +16,7 @@ function generateHtmlPlugins(templateDir) {
     const name = parts[0];
     const extension = parts[1];
     return new HtmlWebpackPlugin({
+      minify: false,
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
